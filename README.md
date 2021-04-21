@@ -44,3 +44,22 @@
 ### Scaling
 - scaling up is making a component larger or faster
 - scaling out is making more servers to handle load
+
+### AWS Setup
+- Sparta Global naming convention for EC2
+    - name of your group
+    - your name
+    - Eng84_isobel_app
+- Security group works on the instance level as a firewall for your machine
+- SSH works on Port 22
+- DO NOT push any keys etc. to Git-hub
+
+### Two-tier architecture
+- 2 different machines on the same cloud, eg:
+- Ubuntu 16.04 app EC2 with Nodejs and Nginx - Public IP
+- Ubuntu 16.04 for Mongo DB - No public IP, only accessible from the app machine
+
+### EC2
+- Elastic Compute Cloud
+- Infrastructure running in the cloud
+- Very flexible and scalable
