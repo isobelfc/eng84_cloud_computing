@@ -54,12 +54,49 @@
 - SSH works on Port 22
 - DO NOT push any keys etc. to Git-hub
 
+### Monolith architecture
+- everything in the same "box"
+- any changes made in the app means the entire machine has to restart
+- the UP time takes longer and longer
+
 ### Two-tier architecture
 - 2 different machines on the same cloud, eg:
 - Ubuntu 16.04 app EC2 with Nodejs and Nginx - Public IP
 - Ubuntu 16.04 for Mongo DB - No public IP, only accessible from the app machine
+- application and database as two tiers
+- can restart the app without restarting the database
+
+![Two tier architecture diagram](https://i.pinimg.com/originals/7d/22/da/7d22dae92ba8494d062aab040bfc4209.png)
+
+### Three tier architecture
+- Presentation layer, application layer, and data layer
+
+![Three tier architecture diagram](https://www.jinfonet.com/wp-content/uploads/2017/12/3-tier_architecture-1.png)
 
 ### EC2
 - Elastic Compute Cloud
 - Infrastructure running in the cloud
 - Very flexible and scalable
+
+### Subnets
+- public or private
+- security for your virtual machine
+- network within a larger network
+- improves network routing efficiency - network traffic can travel a shorter distance and avoid unnecessary routers
+- e.g. create one subnet for teachers and one for students
+
+### Security groups
+- works as a firewall on the instance level
+
+### VPC
+- Virtual Private Cloud
+- allows you to create a private, secure place on the public cloud
+
+### Regions and Availability Zones
+- https://aws.amazon.com/about-aws/global-infrastructure/regions_az/
+- use the nearest AZ to the user
+- if one data centre goes down traffic is redirected to a nearby one
+
+### Multi-cloud architecture
+- deploying an application on multiple clouds to make it highly accessible
+- expensive, so used by big companies
